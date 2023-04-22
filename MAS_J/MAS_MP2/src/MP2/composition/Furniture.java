@@ -35,17 +35,10 @@ public class Furniture {
         return Collections.unmodifiableSet(extent);
     }
 
-    public void checkElement(Element element) {
+    public void addElement(Element element) {
         if(element == null) {
             throw new IllegalArgumentException("Element cannot be null");
         }
-        if(element.getName() == null || element.getName().isBlank()) {
-            throw new IllegalArgumentException("Element name cannot be null or empty");
-        }
-    }
-
-    public void addElement(Element element) {
-        checkElement(element);
         if(elements.contains(element)) {
             throw new IllegalArgumentException("Furniture already has this element");
         }
@@ -53,7 +46,9 @@ public class Furniture {
     }
 
     public void removeElement(Element element) {
-        checkElement(element);
+        if(element == null) {
+            throw new IllegalArgumentException("Element cannot be null");
+        }
         if(!elements.contains(element)) return;
 
         elements.remove(element);
