@@ -12,7 +12,7 @@ public class SkeletonSwordsman extends  Skeleton {
         return swordMaterial;
     }
 
-    public void setSwordMaterial(String swordMaterial) {
+    private void setSwordMaterial(String swordMaterial) {
         if(swordMaterial == null || swordMaterial.isBlank())
         {
             throw new IllegalArgumentException("Sword material must be specified");

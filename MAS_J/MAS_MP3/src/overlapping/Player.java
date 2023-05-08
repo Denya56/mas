@@ -75,7 +75,7 @@ public class Player implements IFighter, IRanger, IMage{
         return strength;
     }
 
-    public void setStrength(Double strength) {
+    private void setStrength(Double strength) {
         if(strength == null) return;
         if(strength <= 0) {
             throw new IllegalArgumentException("Strength cannot be smaller than 1");
@@ -87,7 +87,7 @@ public class Player implements IFighter, IRanger, IMage{
         return agility;
     }
 
-    public void setAgility(Double agility) {
+    private void setAgility(Double agility) {
         if(agility == null) return;
         if(agility <= 0)
         {
@@ -100,7 +100,7 @@ public class Player implements IFighter, IRanger, IMage{
         return wisdom;
     }
 
-    public void setWisdom(Double wisdom) {
+    private void setWisdom(Double wisdom) {
         if(wisdom == null) return;
         if(wisdom <= 0)
         {

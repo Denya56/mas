@@ -12,7 +12,7 @@ public class Airplane extends Vehicle {
         return numberOfEngines;
     }
 
-    public void setNumberOfEngines(int numberOfEngines) {
+    private void setNumberOfEngines(int numberOfEngines) {
         if(numberOfEngines <= 0)
         {
             throw new IllegalArgumentException("Number of engines cannot be smaller than 1");

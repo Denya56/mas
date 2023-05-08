@@ -12,7 +12,7 @@ public class Car extends Vehicle{
         return numberOfWheels;
     }
 
-    public void setNumberOfWheels(String numberOfWheels) {
+    private void setNumberOfWheels(String numberOfWheels) {
         if(numberOfWheels == null || numberOfWheels.isBlank())
         {
             throw new IllegalArgumentException("Number of wheels must be specified");

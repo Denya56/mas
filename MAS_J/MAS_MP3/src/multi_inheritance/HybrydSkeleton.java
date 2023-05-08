@@ -6,8 +6,8 @@ public class HybrydSkeleton extends SkeletonSwordsman implements ISkeletonArcher
 
     public HybrydSkeleton(String name, String swordMaterial, int numberOfArrows, double maxCarryWeight) {
         super(name, swordMaterial);
-        this.numberOfArrows = numberOfArrows;
-        this.maxCarryWeight = maxCarryWeight;
+        setNumberOfArrows(numberOfArrows);
+        setMaxCarryWeight(maxCarryWeight);
     }
 
     @Override
@@ -28,7 +28,7 @@ public class HybrydSkeleton extends SkeletonSwordsman implements ISkeletonArcher
         return maxCarryWeight;
     }
 
-    public void setMaxCarryWeight(double maxCarryWeight) {
+    private void setMaxCarryWeight(double maxCarryWeight) {
         if(maxCarryWeight < 0)
         {
             throw new IllegalArgumentException("Max carry weight cannot be less than 0");

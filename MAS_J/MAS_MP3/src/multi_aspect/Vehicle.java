@@ -19,7 +19,7 @@ public abstract class Vehicle {
         return name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         if(name == null || name.isBlank())
         {
             throw new IllegalArgumentException("Name must be specified");
@@ -31,7 +31,7 @@ public abstract class Vehicle {
         return horsepower;
     }
 
-    public void setHorsepower(double horsepower) {
+    private void setHorsepower(double horsepower) {
         if(horsepower <= 0)
         {
             throw new IllegalArgumentException("Horsepowe cannot be smaller than 1");
@@ -43,7 +43,7 @@ public abstract class Vehicle {
         return engineType;
     }
 
-    public void setEngineType(EngineType engineType) {
+    private void setEngineType(EngineType engineType) {
         if(engineType == null) {
             throw new IllegalArgumentException("Engine type cannot be null");
         }
@@ -54,7 +54,7 @@ public abstract class Vehicle {
         return numberOfPistons;
     }
 
-    public void setNumberOfPistons(int numberOfPistons) {
+    private void setNumberOfPistons(int numberOfPistons) {
         if(numberOfPistons <= 0)
         {
             throw new IllegalArgumentException("Number of pistons cannot be smaller than 1");
@@ -66,7 +66,7 @@ public abstract class Vehicle {
         return jetFuelType;
     }
 
-    public void setJetFuelType(String jetFuelType) {
+    private void setJetFuelType(String jetFuelType) {
         if(jetFuelType == null || jetFuelType.isBlank())
         {
             throw new IllegalArgumentException("Jet fuel type must be specified");

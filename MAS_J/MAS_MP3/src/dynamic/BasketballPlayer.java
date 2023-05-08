@@ -41,7 +41,7 @@ public class BasketballPlayer {
         return throwingPower;
     }
 
-    public void setThrowingPower(Double throwingPower) {
+    private void setThrowingPower(Double throwingPower) {
         if(throwingPower == null) {
             this.throwingPower = throwingPower;
             return;
@@ -56,7 +56,7 @@ public class BasketballPlayer {
         return jumpHeight;
     }
 
-    public void setJumpHeight(Double jumpHeight) {
+    private void setJumpHeight(Double jumpHeight) {
         if(jumpHeight == null) {
             this.jumpHeight = jumpHeight;
             return;

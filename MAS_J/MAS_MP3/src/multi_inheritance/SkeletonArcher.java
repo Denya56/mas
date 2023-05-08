@@ -5,7 +5,7 @@ public class SkeletonArcher extends Skeleton implements ISkeletonArcher{
 
     public SkeletonArcher(String name, int numberOfArrows) {
         super(name);
-        this.numberOfArrows = numberOfArrows;
+        setNumberOfArrows(numberOfArrows);
     }
 
     @Override
