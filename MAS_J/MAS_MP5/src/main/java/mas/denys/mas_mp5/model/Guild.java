@@ -41,5 +41,6 @@ public class Guild {
     @OneToMany(mappedBy = "guild", cascade = CascadeType.REMOVE)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
+    @Setter(AccessLevel.PRIVATE)
     private Set<GuildUnit> guildUnits = new HashSet<>();
 }
