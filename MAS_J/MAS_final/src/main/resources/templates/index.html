@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Shoppu</title>
+        <link rel="stylesheet" type="text/css" href="/styles.css">
+    </head>
+    <body>
+    <div th:switch="${shopSellers}">
+        <h2 th:case="null">No sellers!</h2>
+        <div th:case="*">
+            <h2>Sellers</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Company</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="seller : ${shopSellers}">
+                    <td>
+                        <a th:href="@{'/products/user/' + ${seller.id}}">
+                            <span th:text="${seller.firstName + ' ' + seller.lastName}"></span>
+                        </a>
+                    </td>
+                    <td th:text="${seller.companyName}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </body>
+</html>

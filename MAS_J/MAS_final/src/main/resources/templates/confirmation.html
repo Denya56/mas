@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Purchase Confirmation</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Purchase Confirmation</h2>
+    <div class="confirmation-details">
+        <p>Thank you for your purchase!</p>
+        <p>Your order has been successfully placed with the following details:</p>
+
+        <ul>
+            <li><strong>Order ID:</strong> <span th:text="${productOrder.id}"></span></li>
+            <li><strong>Delivery Address:</strong> <span th:text="${productOrder.address}"></span></li>
+            <li><strong>Delivery Type:</strong> <span th:text="${productOrder.deliveryType}"></span></li>
+        </ul>
+
+        <p>An email confirmation has been sent to your registered email address.</p>
+
+        <p>If you have any questions or need further assistance, please contact our customer support.</p>
+        <p><a href="/index" class="btn btn-primary">Go Back to the list of sellers</a></p>
+    </div>
+</div>
+</body>
+</html>

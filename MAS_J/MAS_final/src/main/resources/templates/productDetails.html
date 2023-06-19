@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Shoppu</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<div th:switch="${productDetails}">
+    <h2 th:case="null">No users yet!</h2>
+    <div th:case="*">
+        <div class="product">
+            <h1 th:text="${productDetails.name}">Product Name</h1>
+            <div class="product-details">
+                <div class="product-image">
+                    <img th:src="@{/img.jpg}" alt="Product Image" />
+                </div>
+                <div class="product-info">
+                    <p>Status: <span th:text="${productDetails.status}">Unknown</span></p>
+                    <p>Price: <span th:text="'$' + ${productDetails.price}">Price: $0.00</span></p>
+                    <a th:href="@{/buyProduct(product_id=${productDetails.id}, userId=${userId})}" class="btn">Purchase</a>
+                </div>
+            </div>
+            <div class="product-description">
+                <h2>Description</h2>
+                <p th:text="${productDetails.description}">Product Description</p>
+            </div>
+            <div class="product-attributes">
+                <h2>Product Attributes</h2>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>Release Date:</td>
+                        <td th:text="${productDetails.releaseDate}"></td>
+                    </tr>
+                    <tr>
+                        <td>Developer:</td>
+                        <td th:text="${productDetails.developer}"></td>
+                    </tr>
+                    <tr>
+                        <td>Publisher:</td>
+                        <td th:text="${productDetails.publisher}"></td>
+                    </tr>
+                    <tr>
+                        <td>Product Platform:</td>
+                        <td th:text="${productDetails.productPlatform}"></td>
+                    </tr>
+                    <tr>
+                        <td>Minimum Requirements:</td>
+                        <td th:text="${productDetails.minRequirements}"></td>
+                    </tr>
+                    <tr>
+                        <td>Recommended Requirements:</td>
+                        <td th:text="${productDetails.recommendedRequirements}"></td>
+                    </tr>
+                    <tr>
+                        <td>Console Generation:</td>
+                        <td th:text="${productDetails.consoleGeneration}"></td>
+                    </tr>
+                    <tr>
+                        <td>Console Name:</td>
+                        <td th:text="${productDetails.consoleName}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
